@@ -13,7 +13,7 @@ public class Main {
 
 	public static void main(String[] args) {
     
-		Gamer gamer1=new Gamer(1,"Sema","Kaya","29495190638",1992);
+		Gamer gamer1=new Gamer(1,"Sema","Kaya","27465890838",1992);
 		GamerManager gamerManager=new GamerManager(new GamerCheckManager());
 		gamerManager.add(gamer1);
 		
