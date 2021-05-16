@@ -1,19 +1,18 @@
-package GameSales;
-
+import GameSales.Adapters.MernisServiceAdaptor;
 import GameSales.business.concretes.CampaignManager;
 import GameSales.business.concretes.GameManager;
 import GameSales.business.concretes.GameSaleManager;
-import GameSales.business.concretes.GamerCheckManager;
 import GameSales.business.concretes.GamerManager;
 import GameSales.entities.concretes.Campaign;
 import GameSales.entities.concretes.Game;
 import GameSales.entities.concretes.Gamer;
-    
-		Gamer gamer1=new Gamer(1,"Sema","Kaya","26987519639",1992);
+
+public class Main2 {
+
 	public static void main(String[] args) {
-    
+
 		Gamer gamer1=new Gamer(1,"Sema","Kaya","27465890838",1992);
-		GamerManager gamerManager=new GamerManager(new GamerCheckManager());
+		GamerManager gamerManager=new GamerManager(new MernisServiceAdaptor());
 		gamerManager.add(gamer1);
 		
 		Game game1=new Game(1,"PubG",120);
@@ -27,7 +26,6 @@ import GameSales.entities.concretes.Gamer;
         GameSaleManager gameSaleManager=new GameSaleManager();
         gameSaleManager.gameSale(game1, gamer1);
         gameSaleManager.gameSaleCampaign(game1, gamer1, campaign1);
-		
 	}
 
 }
