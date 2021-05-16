@@ -1,5 +1,6 @@
 package GameSales;
 
+import GameSales.Adapters.MernisServiceAdaptor;
 import GameSales.business.concretes.CampaignManager;
 import GameSales.business.concretes.GameManager;
 import GameSales.business.concretes.GameSaleManager;
@@ -13,8 +14,8 @@ public class Main {
 
 	public static void main(String[] args) {
     
-		Gamer gamer1=new Gamer(1,"Sema","Kaya","29495190638",1992);
-		GamerManager gamerManager=new GamerManager(new GamerCheckManager());
+		Gamer gamer1=new Gamer(1,"Sema","Kaya","26987519639",1992);
+		GamerManager gamerManager=new GamerManager(new MernisServiceAdaptor());
 		gamerManager.add(gamer1);
 		
 		Game game1=new Game(1,"PubG",120);
